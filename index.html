@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cee.Lux Studio | Braids, Locs &amp; Wig Services</title>
+<meta name="description" content="Cee.Lux Studio: braids, locs, wig services and custom styles for Afro and Caribbean hair. Where your crown meets Luxury. Appointment only.">
+<meta name="theme-color" content="#F7F0E3">
+<meta property="og:title" content="Cee.Lux Studio">
+<meta property="og:description" content="Cee.Lux Studio: braids, locs, wig services and custom styles for Afro and Caribbean hair. Where your crown meets Luxury. Appointment only.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23F7F0E3' stroke='%23A47C36' stroke-width='3'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23A47C36'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap">
+<style>
+/* Layout: photo-led pages with arch and circle crops that echo the logo ring.
+   One scrolling app, seven pages switched by the nav: Home, About, Policies, FAQs, Services & Pricing, Contact, Book Now.
+   Palette: cream ground, white-cream paper, cocoa brown ink, gold from the logo. Light only. */
+:root{
+  --cream:#F7F0E3; --paper:#FFFCF6; --cocoa:#3A2418; --mocha:#6E5240;
+  --gold:#A47C36; --gold-text:#7D5A1B; --line:#E6D7BE; --sand:#EFE3CE;
+  --gold-grad:linear-gradient(135deg,#8E6420 0%,#DDBB70 42%,#A87A2E 68%,#E6CB8B 100%);
+  --f-script:'Pinyon Script','Snell Roundhand',cursive;
+  --f-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --f-body:'Jost','Helvetica Neue',Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--cream);color:var(--cocoa);font-family:var(--f-body);font-weight:300;font-size:16px;line-height:1.65;
+  margin:0;padding-inline:clamp(16px,5vw,56px);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin-inline:auto}
+a{color:inherit}
+p{margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:500;line-height:1.1;margin:0;text-wrap:balance;color:var(--cocoa)}
+h1{font-size:clamp(2.4rem,6vw,4.4rem)}
+h2{font-size:clamp(1.9rem,4.4vw,3rem)}
+h3{font-size:1.45rem}
+h4{font-size:1.15rem}
+.eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-text);font-weight:400}
+.gold-text{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.script{font-family:var(--f-script);font-weight:400;font-size:1.35em;line-height:.8;padding-inline:.04em;padding-bottom:.2em}
+.lead{font-size:1.1rem;color:var(--mocha);max-width:52ch}
+.muted{color:var(--mocha)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--cream) 92%,transparent);backdrop-filter:blur(10px);
+  margin-inline:calc(-1*clamp(16px,5vw,56px));padding-inline:clamp(16px,5vw,56px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.brand{font-family:var(--f-script);font-size:2.2rem;text-decoration:none;line-height:1;padding-top:4px;white-space:nowrap}
+.brand small{font-family:var(--f-body);font-size:.55rem;letter-spacing:.34em;color:var(--mocha);margin-left:6px;vertical-align:middle;-webkit-text-fill-color:var(--mocha)}
+.links{display:flex;gap:clamp(12px,2vw,26px);align-items:center}
+.links a{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--mocha);padding:10px 0;border-bottom:1px solid transparent}
+.links a:hover{color:var(--cocoa)}
+.links a[aria-current="page"]{color:var(--cocoa);border-bottom-color:var(--gold)}
+.navright{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--cocoa);border-radius:999px;padding:9px 16px;font:inherit;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+
+.btn{display:inline-block;font:inherit;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;text-decoration:none;text-align:center;
+  padding:15px 28px;border-radius:999px;cursor:pointer;border:1px solid transparent;transition:transform .2s,background .2s,filter .2s}
+.btn-dark{background:var(--cocoa);color:var(--cream)}
+.btn-dark:hover{background:#4d3223;transform:translateY(-1px)}
+.btn-gold{background:var(--gold-grad);color:var(--cocoa)}
+.btn-gold:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-line{border-color:var(--gold);color:var(--gold-text);background:transparent}
+.btn-line:hover{background:var(--paper)}
+.btn-sm{padding:11px 20px;font-size:.68rem}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+
+/* page shell */
+.page{padding-block:clamp(36px,6vw,72px) clamp(48px,8vw,96px)}
+.page-head{display:grid;gap:14px;max-width:680px;margin-bottom:clamp(28px,5vw,48px)}
+.page-head:focus{outline:none}
+section.block{padding-top:clamp(40px,6vw,72px)}
+.sec-head{display:grid;gap:10px;margin-bottom:24px;max-width:640px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,64px);align-items:center}
+.hero h1{margin:16px 0 20px}
+.hero h1 .script{font-size:1.25em;display:inline-block;line-height:.9}
+.hero .lead{margin-bottom:28px}
+.notice{margin-top:26px;display:inline-flex;gap:12px;align-items:center;padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.88rem;color:var(--mocha)}
+.notice b{font-weight:500;color:var(--cocoa);letter-spacing:.14em;text-transform:uppercase;font-size:.7rem}
+.collage{position:relative;width:min(100%,460px);margin-inline:auto;padding-bottom:12%}
+.arch{aspect-ratio:4/5;border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--sand);box-shadow:0 0 0 1px var(--line),0 22px 50px -24px rgba(58,36,24,.45)}
+.arch img,.circ img{width:100%;height:100%;object-fit:cover;display:block}
+.circ{position:absolute;left:-6%;bottom:0;width:42%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid var(--cream);box-shadow:0 0 0 2px var(--gold)}
+.ring{position:absolute;right:-3%;top:6%;width:26%;aspect-ratio:1;border-radius:50%;border:2px solid var(--gold);opacity:.6;pointer-events:none}
+
+.strip{margin-top:clamp(36px,6vw,64px);display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}
+.strip>div{padding:20px clamp(10px,2vw,28px);display:grid;gap:2px;text-align:center}
+.strip>div+div{border-left:1px solid var(--line)}
+.strip b{font-family:var(--f-display);font-size:1.35rem;font-weight:500}
+.strip span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mocha)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:clamp(16px,2.4vw,28px)}
+.card{display:grid;grid-template-rows:auto 1fr;min-width:0}
+.card .ph{position:relative;aspect-ratio:4/5;border-radius:140px 140px 14px 14px;overflow:hidden;background:var(--sand);border:0;padding:0;cursor:zoom-in;display:block;width:100%}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.card .ph:hover img{transform:scale(1.04)}
+.card .body{display:grid;gap:8px;align-content:start;padding-top:16px}
+.card .tag{justify-self:start;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--cocoa);color:var(--cream);font-weight:400}
+.card .tag.ref{background:transparent;border:1px solid var(--gold);color:var(--gold-text)}
+.card p{color:var(--mocha);font-size:.95rem}
+.card .meta{font-size:.78rem;letter-spacing:.08em;color:var(--gold-text);padding-top:8px;border-top:1px solid var(--line)}
+.card a.more{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text)}
+.card.compact .ph{border-radius:100px 100px 12px 12px}
+
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4vw,28px)}
+.link-card{display:grid;gap:8px;padding:24px;background:var(--paper);border:1px solid var(--line);border-radius:6px;text-decoration:none;transition:border-color .2s,transform .2s}
+.link-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.link-card span{color:var(--mocha);font-size:.95rem}
+.link-card em{font-style:normal;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text)}
+
+.band{margin-top:clamp(44px,7vw,84px);background:var(--cocoa);color:var(--cream);border-radius:6px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.band h2{color:var(--cream)}
+.band p{color:#D9C8AE;margin-top:8px}
+.band .btn-gold{white-space:nowrap}
+
+/* about */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:center}
+.split .arch{max-width:420px;width:100%;margin-inline:auto}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.pills span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mocha)}
+
+/* accordions */
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;font-family:var(--f-display);font-size:1.3rem;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold-text);font-family:var(--f-body);font-weight:300;font-size:1.5rem;line-height:1;flex:none}
+details[open] summary::after{content:"–"}
+details .in{padding:0 0 22px;display:grid;gap:10px;color:var(--mocha);max-width:68ch}
+details ul,.list{margin:0;padding-left:1.1em;display:grid;gap:7px}
+details h4{margin-top:8px;color:var(--cocoa)}
+.acc{max-width:820px}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.chip{font:inherit;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--mocha);cursor:pointer}
+.chip:hover{border-color:var(--gold);color:var(--cocoa)}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px}
+.fact{padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:6px;display:grid;gap:4px}
+.fact b{font-family:var(--f-display);font-size:1.7rem;font-weight:500;line-height:1}
+.fact span{font-size:.78rem;color:var(--mocha)}
+
+.fees{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:6px 0 10px}
+.fee{padding:20px 18px;background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:6px;display:grid;gap:6px;align-content:start}
+.fee small{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text)}
+.fee b{font-family:var(--f-display);font-size:2rem;font-weight:500;line-height:1}
+.fee span{font-size:.9rem;color:var(--mocha)}
+.callout{padding:18px 22px;background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;color:var(--mocha);max-width:820px;margin-top:22px}
+.callout b{color:var(--cocoa);font-weight:500}
+.card-box{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:clamp(20px,3vw,32px);max-width:820px}
+.card-box ul{margin:0;padding-left:1.1em;display:grid;gap:8px;color:var(--mocha)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,2.4vw,28px)}
+.cbox{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:clamp(20px,3vw,30px);display:grid;gap:12px;align-content:start;min-width:0}
+.cbox .big{font-family:var(--f-display);font-size:1.5rem;font-weight:500;overflow-wrap:anywhere;user-select:all}
+
+/* booking */
+.booking{max-width:720px;margin-inline:auto;text-align:center;display:grid;gap:22px;justify-items:center}
+.steps{display:grid;gap:12px;text-align:left;width:100%}
+.steps div{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:16px 20px;background:var(--paper);border:1px solid var(--line);border-radius:6px}
+.steps i{font-style:normal;font-family:var(--f-display);font-size:1.5rem;color:var(--gold-text);line-height:1}
+
+footer{border-top:1px solid var(--line);padding-block:44px;display:grid;gap:24px}
+footer .top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:start}
+footer .brand{font-size:2.6rem}
+footer nav{display:flex;gap:10px 22px;flex-wrap:wrap}
+footer nav a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--mocha)}
+footer nav a:hover{color:var(--cocoa)}
+footer .fine{font-size:.82rem;color:var(--mocha)}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:60;background:rgba(32,20,13,.94);display:grid;grid-template-rows:1fr auto;place-items:center;padding:20px 16px;
+  padding-top:calc(20px + env(safe-area-inset-top,0px));padding-bottom:calc(20px + env(safe-area-inset-bottom,0px))}
+.lb img{max-height:78vh;max-width:min(100%,760px);width:auto;height:auto;border-radius:4px;display:block}
+.lb .cap{color:#F3E9D8;text-align:center;padding-top:14px;display:grid;gap:4px}
+.lb .cap b{font-family:var(--f-display);font-size:1.5rem;font-weight:500}
+.lb .cap i{font-style:normal;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:#E2C27F}
+.lb button{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);color:#F3E9D8;width:46px;height:46px;border-radius:50%;font-size:1.2rem;cursor:pointer}
+
+@media (max-width:900px){
+  .menu-btn{display:inline-block}
+  .links{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;background:var(--cream);border-bottom:1px solid var(--line);padding:8px clamp(16px,5vw,56px) 16px}
+  .links.open{display:flex}
+  .links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:.78rem}
+  .hero,.split{grid-template-columns:1fr}
+  .collage{width:min(88%,380px)}
+  .facts,.fees{grid-template-columns:1fr 1fr}
+  .three,.contact-grid{grid-template-columns:1fr}
+  .band{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .facts,.fees{grid-template-columns:1fr}
+  .strip span{font-size:.62rem;letter-spacing:.12em}
+  .strip b{font-size:1.1rem}
+  .cards{grid-template-columns:1fr 1fr;gap:14px}
+  .card .ph{border-radius:90px 90px 12px 12px}
+  .card h3{font-size:1.2rem}
+  .brand small{display:none}
+}
+@media (max-width:360px){.cards{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<style>img{max-width:100%}body{margin:0}</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand gold-text" href="#home" data-go aria-label="Cee.Lux Studio, home">Cee.<small>LUX STUDIO</small></a>
+    <div class="navright">
+      <nav class="links" id="links" aria-label="Main">
+        <a href="#home" data-go>Home</a>
+        <a href="#about" data-go>About</a>
+        <a href="#policies" data-go>Policies</a>
+        <a href="#faqs" data-go>FAQs</a>
+        <a href="#services" data-go>Services &amp; Pricing</a>
+        <a href="#contact" data-go>Contact</a>
+      </nav>
+      <a class="btn btn-dark btn-sm" href="#book" data-go>Book Now</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="links">Menu</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- HOME -->
+<div class="page" data-page="home">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Braids · Locs · Wigs · Custom styles</span>
+      <h1 tabindex="-1" data-focus>Where your crown meets <span class="script gold-text">Luxury.</span></h1>
+      <p class="lead">Cee.Lux Studio specialises in braids, locs, wig services and custom styles. Every hairstyle is created with care, attention to detail and a personalised experience. Every crown deserves a touch of Lux.</p>
+      <div class="row">
+        <a class="btn btn-dark" href="#book" data-go>Book Now</a>
+        <a class="btn btn-line" href="#services" data-go>Services &amp; Pricing</a>
+      </div>
+      <div class="notice"><b>Appointment only</b><span>No walk-ins, 9:00 AM – 7:00 PM</span></div>
+    </div>
+    <div class="collage" aria-hidden="false">
+      <div class="arch"><img data-img="large" alt="Large knotless braids with triangle parting" style="object-position:50% 40%"></div>
+      <div class="circ"><img data-img="small" alt="Small knotless braids, viewed from above" style="object-position:55% 22%"></div>
+      <div class="ring"></div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div><b>Braids</b><span>Knotless &amp; twists</span></div>
+    <div><b>Locs</b><span>Retwist &amp; styling</span></div>
+    <div><b>Wigs</b><span>Install &amp; slick styles</span></div>
+  </div>
+
+  <section class="block">
+    <div class="sec-head"><span class="eyebrow">Recent work</span><h2>A look at the studio</h2></div>
+    <div class="cards" id="featured"></div>
+    <div class="row" style="margin-top:28px"><a class="btn btn-line" href="#services" data-go>See all styles</a></div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head"><span class="eyebrow">Before you book</span><h2>Good to know</h2></div>
+    <div class="three">
+      <a class="link-card" href="#services" data-go><h3>Services &amp; Pricing</h3><span>Every style, with add-ons.</span><em>View styles →</em></a>
+      <a class="link-card" href="#policies" data-go><h3>Policies</h3><span>Deposits, timings, hair and preparation.</span><em>Read before booking →</em></a>
+      <a class="link-card" href="#faqs" data-go><h3>FAQs</h3><span>Aftercare, longevity and changes.</span><em>Quick answers →</em></a>
+    </div>
+  </section>
+
+  <div class="band">
+    <div><h2>Ready for your appointment?</h2><p>A 25% deposit secures your slot.</p></div>
+    <a class="btn btn-gold" href="#book" data-go>Book Now</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="page" data-page="about" hidden>
+  <div class="split">
+    <div class="arch"><img data-img="about" alt="Cee, founder of Cee.Lux Studio" style="object-position:55% 35%"></div>
+    <div class="page-head" style="margin-bottom:0">
+      <span class="eyebrow">About</span>
+      <h1 tabindex="-1" data-focus>Cee.Lux Studio</h1>
+      <p class="lead">Where your crown meets <span class="script gold-text">Luxury.</span></p>
+      <p class="muted">Cee.Lux Studio specialises in braids, locs, wig services and custom styles. Cee.Lux is dedicated to creating versatile hairstyles with care, attention to detail and a personalised experience.</p>
+      <p class="muted">Every crown deserves a touch of Lux.</p>
+      <div class="pills"><span>Braids</span><span>Locs</span><span>Wig services</span><span>Custom styles</span></div>
+      <div class="row" style="margin-top:22px"><a class="btn btn-dark" href="#book" data-go>Book Now</a><a class="btn btn-line" href="#services" data-go>Services &amp; Pricing</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- POLICIES -->
+<div class="page" data-page="policies" hidden>
+  <div class="page-head">
+    <span class="eyebrow">Before you book</span>
+    <h1 tabindex="-1" data-focus>Policies &amp; preparation</h1>
+    <p class="lead">Everything you need to know before your appointment, in four short sections.</p>
+  </div>
+  <div class="chips" role="group" aria-label="Jump to a section">
+    <button class="chip" type="button" data-jump="sec-policies">Policies</button>
+    <button class="chip" type="button" data-jump="sec-ext">Extensions &amp; wig quality</button>
+    <button class="chip" type="button" data-jump="sec-hair">Natural hair preparation</button>
+    <button class="chip" type="button" data-jump="sec-fac">Facilities &amp; accessibility</button>
+  </div>
+
+  <section class="block" id="sec-policies">
+    <div class="sec-head"><span class="eyebrow">Section 1</span><h2>Policies</h2></div>
+    <div class="facts">
+      <div class="fact"><b>25%</b><span>deposit secures your slot</span></div>
+      <div class="fact"><b>15 min</b><span>grace period</span></div>
+      <div class="fact"><b>Cash</b><span>balance on the day</span></div>
+      <div class="fact"><b>1 guest</b><span>with advance notice</span></div>
+    </div>
+
+    <h3 style="margin-bottom:14px">Cancellation fees</h3>
+    <div class="fees">
+      <div class="fee"><small>48 hours or more</small><b>No fee</b><span>No late-cancellation fee. The deposit remains non-refundable.</span></div>
+      <div class="fee"><small>Within 48 hours</small><b>25%</b><span>of the full service price.</span></div>
+      <div class="fee"><small>Within 24 hours</small><b>50%</b><span>of the full service price.</span></div>
+      <div class="fee"><small>No-show</small><b>100%</b><span>The full service price applies.</span></div>
+    </div>
+    <p class="muted" style="max-width:68ch;margin-bottom:28px">Any deposit already paid is deducted from the applicable cancellation fee. Payment collection and any use of stored payment details follow the agreed booking terms and applicable law. If Cee.Lux Studio needs to cancel, you will be offered rescheduling or a refund in line with applicable requirements.</p>
+
+    <div class="acc">
+      <details open><summary>Appointments</summary><div class="in"><ul>
+        <li>Cee.Lux Studio operates by appointment only. Walk-ins are not accepted.</li>
+        <li>Arrive prepared for your selected service and allow enough time for your appointment.</li>
+        <li>Emergency appointments may be considered on request, subject to availability, and may cost extra.</li></ul></div></details>
+      <details><summary>Deposits and payments</summary><div class="in"><ul>
+        <li>A deposit is required to secure an appointment.</li>
+        <li>The deposit is 25% of the standard price of your service and is deducted from the total.</li>
+        <li>Deposits are non-refundable, subject to applicable consumer rights and legal requirements.</li>
+        <li>The remaining balance is payable in cash on the day.</li>
+        <li>Please bring the correct balance where possible. Change of up to £5 may be returned by bank transfer.</li></ul></div></details>
+      <details><summary>Late arrivals</summary><div class="in"><ul>
+        <li>A 15-minute grace period is provided.</li>
+        <li>After the first 15 minutes, a £5 late fee applies for every additional five minutes.</li>
+        <li>The maximum waiting time is 30 minutes. Later arrivals may result in cancellation and the appointment being treated as a no-show.</li>
+        <li>Please contact Cee.Lux Studio as soon as possible if you expect to be late.</li></ul></div></details>
+      <details><summary>Guests</summary><div class="in"><ul>
+        <li>One guest is permitted, provided advance notice is given.</li>
+        <li>Guests must stay in the designated area and respect the privacy of the accommodation.</li>
+        <li>Guests must not explore other areas of the property.</li>
+        <li>If a guest leaves during the appointment, they should arrange their own plans and return as agreed.</li></ul></div></details>
+    </div>
+  </section>
+
+  <section class="block" id="sec-ext">
+    <div class="sec-head"><span class="eyebrow">Section 2</span><h2>Extensions &amp; wig quality</h2><p class="muted">The hair requirements for braids, twists, locs and wig services.</p></div>
+    <div class="acc">
+      <details open><summary>Extension hair</summary><div class="in"><ul>
+        <li>Extension hair for braided styles must be pre-pulled before the appointment.</li>
+        <li>If you need Cee.Lux to pull hair that is not already pulled, select the Hair Preparation add-on. Extra appointment time may be needed.</li>
+        <li>You are responsible for buying the correct type, colour, length and quantity of hair for your style, and enough of it to finish the style.</li>
+        <li>Hair quality, texture and colour can affect the final result.</li>
+        <li>Unsure what to buy? Contact Cee.Lux Studio before booking.</li></ul></div></details>
+      <details><summary>Wig requirements</summary><div class="in"><ul>
+        <li>Wigs should be clean, detangled and ready for the selected service.</li>
+        <li>Human-hair wigs with HD lace are recommended for a seamless finish.</li>
+        <li>Transparent lace may be accepted, but the final appearance can differ. Thick or stiff lace may not give the same seamless result, and suitability can be discussed before the appointment.</li>
+        <li>Please say if your wig is synthetic. Not all synthetic wigs are suitable for heat styling.</li>
+        <li>Discuss any customisation in advance.</li>
+        <li>Wig reinstallations may need a consultation, and you may be asked to send photos or videos beforehand.</li></ul></div></details>
+      <details><summary>Added curls</summary><div class="in"><ul>
+        <li>Buy bundles with a curl pattern that matches the result you want.</li>
+        <li>Hair must suit the intended styling method, including heat styling where needed.</li>
+        <li>The final result and how long it lasts depend on the quality and texture of the hair and how it is looked after.</li></ul></div></details>
+    </div>
+  </section>
+
+  <section class="block" id="sec-hair">
+    <div class="sec-head"><span class="eyebrow">Section 3</span><h2>Natural hair preparation</h2><p class="muted">Please make sure your natural hair is properly prepared before you arrive.</p></div>
+    <div class="acc">
+      <details open><summary>Wash &amp; dry</summary><div class="in"><p>Hair should be clean and fully dry before your appointment, unless your chosen service says otherwise.</p></div></details>
+      <details><summary>Detangling</summary><div class="in"><p>Arrive with your hair thoroughly detangled and free from excessive product build-up.</p></div></details>
+      <details><summary>Previous styles &amp; product residue</summary><div class="in"><p>Hair should be free from old parts, residue and build-up. Please avoid oils, grease, creams or other products before your appointment. You are welcome to bring your preferred oil or leave-in product, which can be applied during your appointment if it suits your chosen style.</p></div></details>
+      <details><summary>Hair condition &amp; allergies</summary><div class="in"><p>Tell Cee.Lux Studio beforehand about anything that could affect your chosen style, including scalp sensitivity or allergies to particular products.</p></div></details>
+      <details><summary>What to arrive with</summary><div class="in"><p>Your natural hair should be prepared for your booked service. For example, if you have booked a frontal installation without the Underwig Cornrows add-on, please arrive with your natural hair in a minimum of eight cornrows.</p></div></details>
+      <details><summary>Come prepared</summary><div class="in"><p>Bring everything you need for your appointment, including the correct payment method, to avoid delays.</p></div></details>
+    </div>
+    <div class="callout"><b>Please note:</b> hair preparation is the client’s responsibility. If extra preparation is needed on arrival, it may affect your appointment time and could cost extra.</div>
+  </section>
+
+  <section class="block" id="sec-fac">
+    <div class="sec-head"><span class="eyebrow">What to expect</span><h2>Facilities &amp; accessibility</h2></div>
+    <div class="card-box"><ul>
+      <li>Toilet facilities are available.</li>
+      <li>Wi-Fi is available.</li>
+      <li>There is no dedicated parking at either appointment location.</li>
+      <li>You may bring your own food and snacks. Where possible, arrange or bring food before your appointment to avoid interruptions or delays.</li>
+      <li>Please check public transport options for the relevant location.</li></ul></div>
+  </section>
+
+  <div class="band">
+    <div><h2>Read everything?</h2><p>Questions about aftercare or changes are in the FAQs.</p></div>
+    <div class="row"><a class="btn btn-line" style="color:#E2C27F;border-color:#E2C27F" href="#faqs" data-go>FAQs</a><a class="btn btn-gold" href="#book" data-go>Book Now</a></div>
+  </div>
+</div>
+
+<!-- FAQS -->
+<div class="page" data-page="faqs" hidden>
+  <div class="page-head">
+    <span class="eyebrow">FAQs</span>
+    <h1 tabindex="-1" data-focus>Quick answers</h1>
+    <p class="lead">Open only the questions you need. Deposits, timings and hair requirements are on the <a href="#policies" data-go>Policies</a> page.</p>
+  </div>
+  <div class="acc">
+    <details open><summary>Can I change my hairstyle after booking?</summary><div class="in">
+      <p>Please contact Cee.Lux Studio as soon as possible. Changes may be approved if the new style needs a similar appointment duration and availability allows. There is no style-change fee for an approved change that takes a similar amount of time.</p>
+      <p>Once the appointment has started, style changes are not permitted, except for removing an add-on where appropriate.</p></div></details>
+    <details><summary>How long will my appointment take?</summary><div class="in">
+      <p>Estimated durations are given in the service descriptions. They are guides, not guarantees, as timing depends on the style, your hair preparation and your individual needs. Appointments may finish earlier or run longer than expected, so please allow extra time.</p></div></details>
+    <details><summary>How long will my hairstyle last?</summary><div class="in">
+      <p>These are general estimates, not guarantees:</p>
+      <ul>
+        <li>Braids, including styles with added curls: 3 weeks or longer</li>
+        <li>Natural-hair twists: about 2–3 weeks</li>
+        <li>Cornrows, with or without extensions: 2 weeks or longer</li>
+        <li>Wig installations: 2 weeks or longer</li>
+        <li>Slick styles: about 1 week or longer</li>
+        <li>Loc retwists and styled retwists: 3 weeks or longer</li></ul>
+      <p>Longevity varies with hair type, lifestyle, maintenance and how the style is cared for.</p></div></details>
+    <details><summary>How do I maintain my hairstyle?</summary><div class="in">
+      <h4>Braids</h4>
+      <ul><li>Protect your style at night with a silk scarf or bonnet.</li>
+        <li>Apply scalp oil about 2–3 times a week, adjusting to your scalp’s needs.</li>
+        <li>For braids with added curls, loosely twist or secure the curls before sleeping.</li>
+        <li>Avoid heavy products on curls. If tangling occurs, use a light spray and conditioner sparingly.</li></ul>
+      <h4>Wigs</h4>
+      <ul><li>Wrap your hair with a silk scarf and bonnet at night.</li>
+        <li>White barber tape may be used where suitable.</li>
+        <li>Avoid heavy products on the lace, and avoid sleeping in a melt band.</li>
+        <li>Remove your scarf and any tape in the morning so the lace and scalp can breathe.</li></ul>
+      <h4>Locs</h4>
+      <ul><li>Wear a durag or loc cap at night.</li>
+        <li>Use a light sheen spray where appropriate.</li>
+        <li>Avoid excess product build-up and unnecessary manipulation.</li></ul>
+      <h4>Slick styles</h4>
+      <ul><li>Use a silk scarf and bonnet to protect the style.</li>
+        <li>Keep moisture, friction and unnecessary product to a minimum.</li></ul></div></details>
+    <details><summary>What if my hairstyle becomes loose or starts coming undone?</summary><div class="in">
+      <p>Please contact Cee.Lux Studio before trying to fix it yourself. Depending on the style and its condition, a refresh or maintenance appointment may be recommended.</p></div></details>
+  </div>
+  <div class="row" style="margin-top:32px"><a class="btn btn-line" href="#contact" data-go>Still have a question?</a><a class="btn btn-dark" href="#book" data-go>Book Now</a></div>
+</div>
+
+<!-- SERVICES -->
+<div class="page" data-page="services" hidden>
+  <div class="page-head">
+    <span class="eyebrow">Services &amp; Pricing</span>
+    <h1 tabindex="-1" data-focus>Styles</h1>
+    <p class="lead">Choose your style. A 25% deposit secures your appointment. Details are on the <a href="#policies" data-go>Policies</a> page.</p>
+  </div>
+  <div class="cards" id="svc"></div>
+
+  <section class="block">
+    <div class="sec-head"><span class="eyebrow">Add-ons</span><h2>Make it yours</h2></div>
+    <div class="acc" id="addons"></div>
+  </section>
+
+  <section class="block">
+    <div class="sec-head"><span class="eyebrow">Twist references</span><h2>Choosing a twist size</h2>
+      <p class="muted">These two photos are references only and are not Cee.Lux Studio’s work. The same sizing and parting shown here also applies to braided styles, including men’s braids.</p></div>
+    <div class="cards" id="refs" style="max-width:600px"></div>
+  </section>
+
+  <div class="band">
+    <div><h2>Found your style?</h2><p>Check what to bring in Policies, then book.</p></div>
+    <a class="btn btn-gold" href="#book" data-go>Book Now</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="page" data-page="contact" hidden>
+  <div class="page-head">
+    <span class="eyebrow">Contact</span>
+    <h1 tabindex="-1" data-focus>Get in touch</h1>
+    <p class="lead">For enquiries, questions before booking, or out-of-hours requests.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="cbox">
+      <span class="eyebrow">Instagram</span>
+      <span class="big">cee.luxstudio</span>
+      <div class="row"><a class="btn btn-dark btn-sm" href="https://www.instagram.com/cee.luxstudio/" target="_blank" rel="noopener">Open Instagram</a></div>
+    </div>
+    <div class="cbox">
+      <span class="eyebrow">Email</span>
+      <span class="big" id="mail">CeeLux37@gmail.com</span>
+      <div class="row"><button class="btn btn-dark btn-sm" type="button" id="copyMail">Copy email</button></div>
+    </div>
+    <div class="cbox">
+      <span class="eyebrow">Availability</span>
+      <h3>9:00 AM – 7:00 PM</h3>
+      <p class="muted">Standard appointment hours. Appointments before 9:00 AM or after 7:00 PM may be available on request, subject to availability. Please contact Cee.Lux Studio in advance. Additional charges may apply.</p>
+    </div>
+    <div class="cbox">
+      <span class="eyebrow">Location</span>
+      <h3>Nottingham &amp; Reading</h3>
+      <p class="muted">Cee.Lux Studio works from Nottingham during university term time and Reading during university holidays. Clients are told about location changes two to three weeks in advance wherever possible.</p>
+      <p class="muted">The exact appointment address is shared with confirmed clients.</p>
+    </div>
+  </div>
+  <div class="row" style="margin-top:32px"><a class="btn btn-dark" href="#book" data-go>Book Now</a><a class="btn btn-line" href="#policies" data-go>Facilities &amp; accessibility</a></div>
+</div>
+
+<!-- BOOK -->
+<div class="page" data-page="book" hidden>
+  <div class="booking">
+    <span class="eyebrow">Book Now</span>
+    <h1 tabindex="-1" data-focus>Reserve your <span class="script gold-text">crown</span> appointment</h1>
+    <p class="lead" id="bookLead">Online booking is being set up. Until it opens, send a message to request your slot and Cee.Lux Studio will reply with availability.</p>
+    <div class="steps">
+      <div><i>1</i><p>Pick your style from <a href="#services" data-go>Services &amp; Pricing</a>.</p></div>
+      <div><i>2</i><p>Read the <a href="#policies" data-go>Policies</a> and prepare your hair and extensions.</p></div>
+      <div><i>3</i><p>Have your 25% deposit ready to secure your appointment.</p></div>
+    </div>
+    <div class="row" style="justify-content:center">
+      <a class="btn btn-dark" id="bookBtn" href="https://www.instagram.com/cee.luxstudio/" target="_blank" rel="noopener">Message on Instagram</a>
+      <a class="btn btn-line" href="#contact" data-go>Email &amp; contact details</a>
+    </div>
+    <p class="muted" style="font-size:.88rem">Appointment only. The exact address is shared with confirmed clients.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="top">
+    <div><a class="brand gold-text" href="#home" data-go>Cee.</a><p class="muted" style="margin-top:6px">Where your crown meets <span class="script gold-text">Luxury.</span></p></div>
+    <nav aria-label="Footer">
+      <a href="#home" data-go>Home</a><a href="#about" data-go>About</a><a href="#policies" data-go>Policies</a><a href="#faqs" data-go>FAQs</a>
+      <a href="#services" data-go>Services &amp; Pricing</a><a href="#contact" data-go>Contact</a><a href="#book" data-go>Book Now</a>
+    </nav>
+  </div>
+  <p class="fine">Cee.Lux Studio · Appointment only · Instagram cee.luxstudio · CeeLux37@gmail.com</p>
+</footer>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo" hidden>
+  <button id="lbx" type="button" aria-label="Close">✕</button>
+  <img id="lbimg" alt="">
+  <div class="cap"><b id="lbt"></b><i id="lbc"></i></div>
+</div>
+
+<script>
+/* ---- CONTENT: edit here ---- */
+var BOOKING_URL = '';   // paste the booking page link here when it is ready; Book Now then points to it
+var IMG = {
+ "slick": "images/slick.jpg",
+ "wig": "images/wig.jpg",
+ "mtwist": "images/mtwist.jpg",
+ "locs": "images/locs.jpg",
+ "large": "images/large.jpg",
+ "medium": "images/medium.jpg",
+ "small": "images/small.jpg",
+ "refL": "images/refL.jpg",
+ "refS": "images/refS.jpg",
+ "about": "images/about.jpg"
+};
+var POS = {slick:'50% 28%',wig:'50% 40%',mtwist:'50% 40%',locs:'50% 40%',large:'50% 40%',medium:'50% 30%',small:'55% 25%',refL:'50% 40%',refS:'50% 45%'};
+/* price and time: leave '' until confirmed. Example: price:'£120', time:'5–7 hrs' */
+var SERVICES = [
+  {k:'slick',  t:'Slick style',        tag:'Model booking', d:'A sleek, polished style with smooth edges and a neat finish.', price:'', time:''},
+  {k:'wig',    t:'Wig install',        tag:'Model booking', d:'A seamless, natural-looking install on your own wig, styled and finished for you.', price:'', time:'', more:['Wig requirements','policies','sec-ext']},
+  {k:'mtwist', t:'Medium twists',      d:'Twists in a medium size with neat, square parting.', price:'', time:''},
+  {k:'locs',   t:'Retwist + two strand', d:'Fresh roots on your existing locs, finished with a two-strand twist style.', price:'', time:''},
+  {k:'large',  t:'Large knotless',     d:'Bold, larger braids with a flat, natural-looking start.', price:'', time:''},
+  {k:'medium', t:'Medium knotless',    d:'The classic knotless size, balancing detail and versatility.', price:'', time:'', more:['Hair requirements','policies','sec-ext']},
+  {k:'small',  t:'Small knotless',     d:'Fine, detailed braids with a lightweight, polished finish.', price:'', time:'', more:['Hair requirements','policies','sec-ext']}
+];
+var REFS = [
+  {k:'refL', t:'Large twist', tag:'Reference · not Cee.Lux work', d:'Larger twists with bigger parts.'},
+  {k:'refS', t:'Small twist', tag:'Reference · not Cee.Lux work', d:'Smaller twists with finer parts.'}
+];
+var ADDONS = [
+  ['Hair Preparation','Cee.Lux pulls and prepares extension hair that has not been pre-pulled. Extra appointment time may be needed.'],
+  ['Underwig Cornrows','Your natural hair is cornrowed neatly under a wig install. Choose this if you are not arriving with a minimum of eight cornrows.']
+];
+var FEATURED = ['large','locs','small','slick'];
+/* ---- end content ---- */
+
+(function(){
+  function $(id){return document.getElementById(id)}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+  /* images */
+  Array.prototype.forEach.call(document.querySelectorAll('img[data-img]'),function(im){im.src=IMG[im.dataset.img]||''});
+
+  /* cards */
+  function card(s,compact){
+    var meta=(s.price?'From '+s.price:'Price on request')+' · '+(s.time?s.time:'Time confirmed at booking');
+    var more=s.more?'<a class="more" href="#'+s.more[1]+'" data-go data-jump="'+s.more[2]+'">'+esc(s.more[0])+' →</a>':'';
+    var tag=s.tag?'<span class="tag'+(/Reference/.test(s.tag)?' ref':'')+'">'+esc(s.tag)+'</span>':'';
+    return '<article class="card'+(compact?' compact':'')+'"><button type="button" class="ph" data-zoom="'+s.k+'" data-t="'+esc(s.t)+'" data-c="'+esc(s.tag||'')+'" aria-label="View '+esc(s.t)+' larger">'+
+      '<img src="'+IMG[s.k]+'" alt="'+esc(s.t)+'" loading="lazy" style="object-position:'+(POS[s.k]||'50% 40%')+'"></button>'+
+      '<div class="body">'+tag+'<h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p>'+(compact?'':'<div class="meta">'+(s.price||s.time||s.k.indexOf('ref')===0?'':'')+meta+'</div>')+more+'</div></article>';
+  }
+  function refCard(s){
+    return '<article class="card"><button type="button" class="ph" data-zoom="'+s.k+'" data-t="'+esc(s.t)+'" data-c="'+esc(s.tag)+'" aria-label="View '+esc(s.t)+' larger">'+
+      '<img src="'+IMG[s.k]+'" alt="'+esc(s.t)+' reference photo" loading="lazy" style="object-position:'+POS[s.k]+'"></button>'+
+      '<div class="body"><span class="tag ref">'+esc(s.tag)+'</span><h3>'+esc(s.t)+'</h3><p>'+esc(s.d)+'</p></div></article>';
+  }
+  var byKey={};SERVICES.forEach(function(s){byKey[s.k]=s});
+  $('svc').innerHTML=SERVICES.map(function(s){return card(s)}).join('');
+  $('featured').innerHTML=FEATURED.map(function(k){return card(byKey[k],true)}).join('');
+  $('refs').innerHTML=REFS.map(refCard).join('');
+  $('addons').innerHTML=ADDONS.map(function(a,i){return '<details'+(i===0?' open':'')+'><summary>'+esc(a[0])+'</summary><div class="in"><p>'+esc(a[1])+'</p></div></details>'}).join('');
+
+  /* booking link */
+  if(BOOKING_URL){var b=$('bookBtn');b.href=BOOKING_URL;b.textContent='Continue to booking';$('bookLead').textContent='Choose your style and appointment time on the booking page.'}
+
+  /* routing */
+  var PAGES=['home','about','policies','faqs','services','contact','book'];
+  var pages=Array.prototype.slice.call(document.querySelectorAll('[data-page]'));
+  var navLinks=Array.prototype.slice.call(document.querySelectorAll('.links a'));
+  function show(h,keepScroll){
+    if(PAGES.indexOf(h)<0)h='home';
+    pages.forEach(function(p){p.hidden=p.dataset.page!==h});
+    navLinks.forEach(function(a){a.getAttribute('href')==='#'+h?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
+    $('links').classList.remove('open');$('menuBtn').setAttribute('aria-expanded','false');
+    if(!keepScroll)window.scrollTo(0,0);
+    var f=document.querySelector('[data-page="'+h+'"] [data-focus]');if(f&&!keepScroll)try{f.focus({preventScroll:true})}catch(e){}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[data-go]');
+    if(a){
+      e.preventDefault();
+      var h=a.getAttribute('href').slice(1);
+      try{location.hash=h}catch(x){}
+      show(h);
+      var j=a.dataset.jump;if(j)setTimeout(function(){var t=$(j);if(t)t.scrollIntoView({behavior:'smooth'})},30);
+    }
+    var jb=e.target.closest('button[data-jump]');
+    if(jb){var t=$(jb.dataset.jump);if(t)t.scrollIntoView({behavior:'smooth'})}
+    var z=e.target.closest('[data-zoom]');
+    if(z)openLb(z);
+  });
+  window.addEventListener('hashchange',function(){show((location.hash||'#home').slice(1))});
+  show((location.hash||'#home').slice(1),true);
+  $('menuBtn').addEventListener('click',function(){var o=$('links').classList.toggle('open');this.setAttribute('aria-expanded',o)});
+
+  /* lightbox */
+  var lb=$('lb'),opener=null;
+  function openLb(el){opener=el;$('lbimg').src=IMG[el.dataset.zoom];$('lbimg').alt=el.dataset.t;$('lbt').textContent=el.dataset.t;$('lbc').textContent=el.dataset.c;lb.hidden=false;document.body.style.overflow='hidden';$('lbx').focus()}
+  function closeLb(){lb.hidden=true;document.body.style.overflow='';if(opener)opener.focus()}
+  $('lbx').onclick=closeLb;
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb()});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')closeLb();if(e.key==='Tab'){e.preventDefault();$('lbx').focus()}});
+
+  /* copy email */
+  $('copyMail').onclick=function(){
+    var b=this,t=$('mail').textContent;
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)}
+    function fb(){var r=document.createRange();r.selectNodeContents($('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy'}
+    try{navigator.clipboard.writeText(t).then(done,fb)}catch(x){fb()}
+  };
+})();
+</script>
+
+</body>
+</html>
