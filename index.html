@@ -130,8 +130,8 @@ section.block{padding-top:clamp(40px,6vw,72px);scroll-margin-top:76px}
 .band .btn-gold{white-space:nowrap}
 
 /* about */
-.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,5vw,64px);align-items:center}
-.split .arch{max-width:420px;width:100%;margin-inline:auto}
+.split{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(24px,5vw,64px);align-items:center}
+.split .arch{max-width:290px;width:100%;margin-inline:auto}
 .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .pills span{padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mocha)}
 
@@ -208,6 +208,7 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
   .links.open{display:flex}
   .links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:.78rem}
   .hero,.split{grid-template-columns:1fr}
+  .split .arch{max-width:230px}
   .collage{width:min(88%,380px)}
   .facts,.fees{grid-template-columns:1fr 1fr}
   .three,.contact-grid{grid-template-columns:1fr}
@@ -287,13 +288,13 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
     <div class="sec-head"><span class="eyebrow">Before you book</span><h2>Good to know</h2></div>
     <div class="three">
       <a class="link-card" href="#services" data-go><h3>Services &amp; Pricing</h3><span>Every style, with add-ons.</span><em>View styles →</em></a>
-      <a class="link-card" href="#policies" data-go><h3>Policies</h3><span>Deposits, timings, hair and preparation.</span><em>Read before booking →</em></a>
+      <a class="link-card" href="#policies" data-go><h3>Policies</h3><span>Timings, hair and preparation.</span><em>Read before booking →</em></a>
       <a class="link-card" href="#faqs" data-go><h3>FAQs</h3><span>Aftercare, longevity and changes.</span><em>Quick answers →</em></a>
     </div>
   </section>
 
   <div class="band">
-    <div><h2>Ready for your appointment?</h2><p>A 25% deposit secures your slot.</p></div>
+    <div><h2>Ready for your appointment?</h2><p>Choose your style and book your slot online.</p></div>
     <a class="btn btn-gold" href="#book" data-go>Book Now</a>
   </div>
 </div>
@@ -331,37 +332,27 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
   <section class="block" id="sec-policies">
     <div class="sec-head"><span class="eyebrow">Section 1</span><h2>Policies</h2></div>
     <div class="facts">
-      <div class="fact"><b>25%</b><span>deposit secures your slot</span></div>
+      <div class="fact"><b>Pre-stretched</b><span>extension hair only</span></div>
       <div class="fact"><b>15 min</b><span>grace period</span></div>
-      <div class="fact"><b>Cash</b><span>balance on the day</span></div>
+      <div class="fact"><b>Cash</b><span>payment on the day</span></div>
       <div class="fact"><b>1 guest</b><span>with advance notice</span></div>
     </div>
-
-    <h3 style="margin-bottom:14px">Cancellation fees</h3>
-    <div class="fees">
-      <div class="fee"><small>48 hours or more</small><b>No fee</b><span>No late-cancellation fee. The deposit remains non-refundable.</span></div>
-      <div class="fee"><small>Within 48 hours</small><b>25%</b><span>of the full service price.</span></div>
-      <div class="fee"><small>Within 24 hours</small><b>50%</b><span>of the full service price.</span></div>
-      <div class="fee"><small>No-show</small><b>100%</b><span>The full service price applies.</span></div>
-    </div>
-    <p class="muted" style="max-width:68ch;margin-bottom:28px">Any deposit already paid is deducted from the applicable cancellation fee. Payment collection and any use of stored payment details follow the agreed booking terms and applicable law. If Cee.Lux Studio needs to cancel, you will be offered rescheduling or a refund in line with applicable requirements.</p>
 
     <div class="acc">
       <details open><summary>Appointments</summary><div class="in"><ul>
         <li>Cee.Lux Studio operates by appointment only. Walk-ins are not accepted.</li>
         <li>Arrive prepared for your selected service and allow enough time for your appointment.</li>
-        <li>Emergency appointments may be considered on request, subject to availability, and may cost extra.</li></ul></div></details>
-      <details><summary>Deposits and payments</summary><div class="in"><ul>
-        <li>A deposit is required to secure an appointment.</li>
-        <li>The deposit is 25% of the standard price of your service and is deducted from the total.</li>
-        <li>Deposits are non-refundable, subject to applicable consumer rights and legal requirements.</li>
-        <li>The remaining balance is payable in cash on the day.</li>
-        <li>Please bring the correct balance where possible. Change of up to £5 may be returned by bank transfer.</li></ul></div></details>
+        <li>Emergency appointments may be considered on request, subject to availability.</li></ul></div></details>
+      <details><summary>Payments</summary><div class="in"><ul>
+        <li>Payment is due in cash on the day of your appointment.</li>
+        <li>Please bring the correct amount where possible. Change of up to £5 may be returned by bank transfer.</li></ul></div></details>
       <details><summary>Late arrivals</summary><div class="in"><ul>
         <li>A 15-minute grace period is provided.</li>
-        <li>After the first 15 minutes, a £5 late fee applies for every additional five minutes.</li>
-        <li>The maximum waiting time is 30 minutes. Later arrivals may result in cancellation and the appointment being treated as a no-show.</li>
+        <li>The maximum waiting time is 30 minutes. Later arrivals may result in the appointment being cancelled.</li>
         <li>Please contact Cee.Lux Studio as soon as possible if you expect to be late.</li></ul></div></details>
+      <details><summary>Cancellations and rescheduling</summary><div class="in"><ul>
+        <li>Please contact Cee.Lux Studio as soon as possible if you need to cancel or reschedule, so your slot can be offered to someone else.</li>
+        <li>If Cee.Lux Studio needs to cancel, you will be offered a new appointment.</li></ul></div></details>
       <details><summary>Guests</summary><div class="in"><ul>
         <li>One guest is permitted, provided advance notice is given.</li>
         <li>Guests must stay in the designated area and respect the privacy of the accommodation.</li>
@@ -374,8 +365,8 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
     <div class="sec-head"><span class="eyebrow">Section 2</span><h2>Extensions &amp; wig quality</h2><p class="muted">The hair requirements for braids, twists, locs and wig services.</p></div>
     <div class="acc">
       <details open><summary>Extension hair</summary><div class="in"><ul>
-        <li>Extension hair for braided styles must be pre-pulled before the appointment.</li>
-        <li>If you need Cee.Lux to pull hair that is not already pulled, select the Hair Preparation add-on. Extra appointment time may be needed.</li>
+        <li>Extension hair for braided styles must be pre-stretched (pre-pulled) before the appointment.</li>
+        <li>Appointments will be cancelled if you bring non-stretched hair.</li>
         <li>You are responsible for buying the correct type, colour, length and quantity of hair for your style, and enough of it to finish the style.</li>
         <li>Hair quality, texture and colour can affect the final result.</li>
         <li>Unsure what to buy? Contact Cee.Lux Studio before booking.</li></ul></div></details>
@@ -403,7 +394,7 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
       <details><summary>What to arrive with</summary><div class="in"><p>Your natural hair should be prepared for your booked service. For example, if you have booked a frontal installation without the Underwig Cornrows add-on, please arrive with your natural hair in a minimum of eight cornrows.</p></div></details>
       <details><summary>Come prepared</summary><div class="in"><p>Bring everything you need for your appointment, including the correct payment method, to avoid delays.</p></div></details>
     </div>
-    <div class="callout"><b>Please note:</b> hair preparation is the client’s responsibility. If extra preparation is needed on arrival, it may affect your appointment time and could cost extra.</div>
+    <div class="callout"><b>Please note:</b> hair preparation is the client’s responsibility. If extra preparation is needed on arrival, it may affect your appointment time.</div>
   </section>
 
   <section class="block" id="sec-fac">
@@ -427,11 +418,11 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
   <div class="page-head">
     <span class="eyebrow">FAQs</span>
     <h1 tabindex="-1" data-focus>Quick answers</h1>
-    <p class="lead">Open only the questions you need. Deposits, timings and hair requirements are on the <a href="#policies" data-go>Policies</a> page.</p>
+    <p class="lead">Open only the questions you need. Timings, payments and hair requirements are on the <a href="#policies" data-go>Policies</a> page.</p>
   </div>
   <div class="acc">
     <details open><summary>Can I change my hairstyle after booking?</summary><div class="in">
-      <p>Please contact Cee.Lux Studio as soon as possible. Changes may be approved if the new style needs a similar appointment duration and availability allows. There is no style-change fee for an approved change that takes a similar amount of time.</p>
+      <p>Please contact Cee.Lux Studio as soon as possible. Changes may be approved if the new style needs a similar appointment duration and availability allows.</p>
       <p>Once the appointment has started, style changes are not permitted, except for removing an add-on where appropriate.</p></div></details>
     <details><summary>How long will my appointment take?</summary><div class="in">
       <p>Estimated durations are given in the service descriptions. They are guides, not guarantees, as timing depends on the style, your hair preparation and your individual needs. Appointments may finish earlier or run longer than expected, so please allow extra time.</p></div></details>
@@ -474,7 +465,7 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
   <div class="page-head">
     <span class="eyebrow">Services &amp; Pricing</span>
     <h1 tabindex="-1" data-focus>Styles</h1>
-    <p class="lead">Choose your style. A 25% deposit secures your appointment. Details are on the <a href="#policies" data-go>Policies</a> page.</p>
+    <p class="lead">Choose your style, then book online. Read the <a href="#policies" data-go>Policies</a> page before your appointment.</p>
   </div>
   <div class="cards" id="svc"></div>
 
@@ -516,7 +507,7 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
     <div class="cbox">
       <span class="eyebrow">Availability</span>
       <h3>9:00 AM – 7:00 PM</h3>
-      <p class="muted">Standard appointment hours. Appointments before 9:00 AM or after 7:00 PM may be available on request, subject to availability. Please contact Cee.Lux Studio in advance. Additional charges may apply.</p>
+      <p class="muted">Standard appointment hours. Appointments before 9:00 AM or after 7:00 PM may be available on request, subject to availability. Please contact Cee.Lux Studio in advance.</p>
     </div>
     <div class="cbox">
       <span class="eyebrow">Location</span>
@@ -537,7 +528,7 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
     <div class="steps">
       <div><i>1</i><p>Pick your style from <a href="#services" data-go>Services &amp; Pricing</a>.</p></div>
       <div><i>2</i><p>Read the <a href="#policies" data-go>Policies</a> and prepare your hair and extensions.</p></div>
-      <div><i>3</i><p>Have your 25% deposit ready to secure your appointment.</p></div>
+      <div><i>3</i><p>Choose a date and time that suits you on the booking page.</p></div>
     </div>
     <div class="row" style="justify-content:center">
       <a class="btn btn-dark" id="bookBtn" href="https://www.instagram.com/cee.luxstudio/" target="_blank" rel="noopener">Message on Instagram</a>
@@ -567,7 +558,7 @@ footer .fine{font-size:.82rem;color:var(--mocha)}
 
 <script>
 /* ---- CONTENT: edit here ---- */
-var BOOKING_URL = '';   // paste the booking page link here when it is ready; Book Now then points to it
+var BOOKING_URL = 'https://ceeluxbooking.as.me/schedule/b6cbec37';   // booking page; every Book Now button opens it
 var IMG = {
  "slick": "images/slick.jpg",
  "wig": "images/wig.jpg",
@@ -596,7 +587,6 @@ var REFS = [
   {k:'refS', t:'Small twist', tag:'Reference · not Cee.Lux work', d:'Smaller twists with finer parts.'}
 ];
 var ADDONS = [
-  ['Hair Preparation','Cee.Lux pulls and prepares extension hair that has not been pre-pulled. Extra appointment time may be needed.'],
   ['Underwig Cornrows','Your natural hair is cornrowed neatly under a wig install. Choose this if you are not arriving with a minimum of eight cornrows.']
 ];
 var FEATURED = ['large','locs','small','slick'];
@@ -630,7 +620,10 @@ var FEATURED = ['large','locs','small','slick'];
   $('addons').innerHTML=ADDONS.map(function(a,i){return '<details'+(i===0?' open':'')+'><summary>'+esc(a[0])+'</summary><div class="in"><p>'+esc(a[1])+'</p></div></details>'}).join('');
 
   /* booking link */
-  if(BOOKING_URL){var b=$('bookBtn');b.href=BOOKING_URL;b.textContent='Continue to booking';$('bookLead').textContent='Choose your style and appointment time on the booking page.'}
+  if(BOOKING_URL){
+    var b=$('bookBtn');b.href=BOOKING_URL;b.textContent='Continue to booking';$('bookLead').textContent='Choose your style and appointment time on the booking page.';
+    Array.prototype.forEach.call(document.querySelectorAll('a[href="#book"]'),function(a){a.href=BOOKING_URL;a.target='_blank';a.rel='noopener';a.removeAttribute('data-go')});
+  }
 
   /* routing */
   var PAGES=['home','about','policies','faqs','services','contact','book'];
